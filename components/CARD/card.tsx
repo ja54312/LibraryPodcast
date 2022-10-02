@@ -11,7 +11,8 @@ const  Card = () => {
     <div className='container-componente-card'>
         <div className='container-card'>
             <div className='container-image-card'>
-                <Image loader={myLoader} className='image-card' src="/Podcasts125/v4/32/95/23/329523c9-6f91-5e7b-a33b-698f3cd83f1f/mza_7961570172365429932.png/170x170bb.png" width={150} height={150} alt='icono de artista'/>
+                {/* <Image loader={myLoader} className='image-card' src="/Podcasts125/v4/32/95/23/329523c9-6f91-5e7b-a33b-698f3cd83f1f/mza_7961570172365429932.png/170x170bb.png" width={150} height={150} alt='icono de artista'/> */}
+                <img src='https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/32/95/23/329523c9-6f91-5e7b-a33b-698f3cd83f1f/mza_7961570172365429932.png/170x170bb.png' className='image-card' alt='icono de artista'/>
             </div>
             <div className='container-name-card'>
                 <span>Song Exploder</span>
