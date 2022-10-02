@@ -6,7 +6,7 @@
     swcMinify: true,
     experimental:{
       images:{
-        unoptimized:true
+        unoptimized:true,
       }
     }
   }

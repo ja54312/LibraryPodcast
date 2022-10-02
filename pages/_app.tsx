@@ -3,6 +3,7 @@ import React from 'react'
 import Head from '../node_modules/next/head'
 import '../styles/index.css'
 import '../styles/variables.css'
+import '../styles/styles.css'
 
 function MyApp({ Component, pageProps }:AppProps) {
     return(

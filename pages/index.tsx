@@ -1,9 +1,16 @@
 import React from 'react'
+import Header from '../components/HEADER/header'
+import Search from '../components/SEARCH/search'
+import Main from '../components/MAIN/main'
+import Footer from '../components/FOOTER/footer'
 
 const Home = () => {
   return (
     <>
-        <h2>holi</h2>
+        <Header/>
+        <Search/>
+        <Main/>
+        <Footer/>
     </>
   )
 }
