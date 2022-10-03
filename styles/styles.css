@@ -52,12 +52,18 @@ nav{
 main{
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 /*Card*/
 .container-componente-card{
     width:300px;
     height: auto;
+    max-height: 270px;
     margin: 5px;
+    padding: 1px;
     cursor: pointer;
     background-color: var(--card-color);
     box-shadow: 0 2px 5px rgb(0 0 0 / 12%);

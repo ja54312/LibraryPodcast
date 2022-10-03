@@ -1,24 +1,27 @@
 import React from 'react'
 import Image from  '../../node_modules/next/image'
 
-const  Card = () => {
+const  Card = ({el}) => {
 
-    const myLoader = ({src,width,quality}) => {
-        return `https://is1-ssl.mzstatic.com/image/thumb/${src}`
-    }
-    
+    // const myLoader = ({src,width,quality}) => {
+    //     return `https://is1-ssl.mzstatic.com/image/thumb/${src}`
+    // }
+    const artista = el["im:artist"].label
+    const name = el["im:name"].label
+    const urlImage = el["im:image"][2].label
+    //console.log(el,'name')
   return (
     <div className='container-componente-card'>
         <div className='container-card'>
             <div className='container-image-card'>
                 {/* <Image loader={myLoader} className='image-card' src="/Podcasts125/v4/32/95/23/329523c9-6f91-5e7b-a33b-698f3cd83f1f/mza_7961570172365429932.png/170x170bb.png" width={150} height={150} alt='icono de artista'/> */}
-                <img src='https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/32/95/23/329523c9-6f91-5e7b-a33b-698f3cd83f1f/mza_7961570172365429932.png/170x170bb.png' className='image-card' alt='icono de artista'/>
+                <img src={urlImage} className='image-card' alt='icono de artista'/>
             </div>
             <div className='container-name-card'>
-                <span>Song Exploder</span>
+                <span>{name}</span>
             </div>
             <div className='container-autor-card'>
-                <span>Author: Song Exploder</span>
+                <span>Author: {artista}</span>
             </div>
         </div>
     </div>

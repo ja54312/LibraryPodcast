@@ -1,7 +1,8 @@
 // 20221002135742
 // https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json
 
-{
+
+const data = {
     "feed": {
       "author": {
         "name": {
@@ -7805,3 +7806,5 @@
       }
     }
   }
+
+  export default data
