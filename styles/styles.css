@@ -102,6 +102,13 @@ main{
     background-color: inherit;
 }
 /*LOADER*/
+.container-loader{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .lds-ring {
     display: inline-block;
     position: relative;
