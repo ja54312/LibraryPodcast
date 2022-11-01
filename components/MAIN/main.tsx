@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
+import { Data,Feed} from '../../schema/data.model'
 import Card from '../CARD/card'
 
-const Main = ({data}) => {
-  //console.log('datos',data.feed.entry)
-  const DATOS = data.feed.entry
+const Main =  ({data}:{data:Data}) => {
+const [datos,setDatos] = useState(null)
+  useEffect(() => {
+    setDatos(data.feed.entry)
+    //console.log(datos)
+  }, [data]);
+
   return (
     <main>
-      {DATOS === 0 ? 
+      {datos === null ? 
         (<span>No hay datos disponibles</span>):
-        (DATOS.map((el) => <Card el={el} key={el.id.attributes.id}/>))
+        (datos.map((el) => <Card el={el} key={el.id.attributes["im:id"]}/>))
       }
     </main>
   )

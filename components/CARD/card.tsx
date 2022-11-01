@@ -1,15 +1,10 @@
 import React from 'react'
-import Image from  '../../node_modules/next/image'
 
 const  Card = ({el}) => {
 
-    // const myLoader = ({src,width,quality}) => {
-    //     return `https://is1-ssl.mzstatic.com/image/thumb/${src}`
-    // }
     const artista = el["im:artist"].label
     const name = el["im:name"].label
     const urlImage = el["im:image"][2].label
-    //console.log(el,'name')
   return (
     <div className='container-componente-card'>
         <div className='container-card'>
