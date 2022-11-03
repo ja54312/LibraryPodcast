@@ -10,17 +10,10 @@ import Message from '../components/MESSAGE/message'
 
 const Home = () => {
   const [dataComparator, setDataComparator] = useLocalStorage('ListSongs', []);
-  //const [diaDeHoy, setDiaDeHoy] = useLocalStorage('Dia', []);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   let url = "https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json"
-  // let Hoy = new Date().getDate()
-  // console.log(Hoy, 'hoy')
-
-  // useEffect(() => {
-  //   setDiaDeHoy(new Date().getDate())
-  // }, []);
 
   useEffect(() => {
     setLoading(true);
@@ -40,7 +33,6 @@ const Home = () => {
 
   return (
     <>
-      <Header />
       <Search />
       {loading && <Loader />}
       {error && (
@@ -50,7 +42,6 @@ const Home = () => {
         />
       )}
       {dataComparator !== null ? <Main data={dataComparator} /> : null}
-      <Footer />
     </>
   )
 }
