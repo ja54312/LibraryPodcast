@@ -1,16 +1,19 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Header = () => {
   return (
     <header>
-        <nav>
-            <div className='container-Name-Header'>
-                Podcaster
-            </div>
-            <div className='container-Loader-Header'>
-                Loader
-            </div>
-        </nav>
+      <nav>
+        <Link href='/'>
+          <div className='container-Name-Header'>
+            Library Podcast
+          </div>
+        </Link>
+        <div className='container-Loader-Header'>
+          Loader
+        </div>
+      </nav>
     </header>
   )
 }

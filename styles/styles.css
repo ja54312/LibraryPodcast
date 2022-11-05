@@ -1,162 +1,169 @@
 /*HEADER*/
-header{
-    width: 100%;
-    height: 50px;
-    margin-bottom: 5px;
+header {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  background-color: var(--header-color);
 }
-nav{
-    width: 100%;
-    height: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--header-color);
+nav {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--header-color);
+  background-color: inherit;
+  color: var(--text-footer-color);
 }
 .container-Name-Header,
-.container-Loader-Header{
-    padding: 5px;
+.container-Loader-Header {
+  padding: 5px;
+  background-color: inherit;
+}
+.container-Name-Header {
+  cursor: pointer;
 }
 /*FOOTER*/
 .footer {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--footer-color);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--footer-color);
 }
-.text-footer{
-    color: var(--text-footer-color);
-    padding:0 10px;
-    margin: 0;
-    background-color: inherit;
+.text-footer {
+  color: var(--text-footer-color);
+  padding: 0 10px;
+  margin: 0;
+  background-color: inherit;
 }
 .text-footer a {
-    text-decoration: none;
-    color:var(--text-footer-color);
-    background-color: inherit;
+  text-decoration: none;
+  color: var(--text-footer-color);
+  background-color: inherit;
 }
 /*SEARCH*/
-.container-search-component{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.container-search-component {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .container-numero-busqueda,
-.container-filtro-busqueda{
-    padding: 5px;
+.container-filtro-busqueda {
+  padding: 5px;
 }
 /*MAIN*/
-main{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /*Card*/
-.container-componente-card{
-    width:300px;
-    height:290px;
-    margin: 5px;
-    padding: 1px;
-    cursor: pointer;
-    background-color: var(--card-color);
-    box-shadow: 0 2px 5px rgb(0 0 0 / 12%);
+.container-componente-card {
+  width: 300px;
+  height: 290px;
+  margin: 5px;
+  padding: 1px;
+  cursor: pointer;
+  background-color: var(--card-color);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 12%);
 }
-.container-componente-card:hover{
-    border: 1px solid var(--border-card-color);
+.container-componente-card:hover {
+  border: 1px solid var(--border-card-color);
 }
-.container-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background-color: inherit;
+.container-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: inherit;
 }
-.container-image-card{
-    background-color: inherit;
+.container-image-card {
+  background-color: inherit;
 }
-.container-image-card .image-card{
-    border-radius: 100px;
-    background-color: inherit;
+.container-image-card .image-card {
+  border-radius: 100px;
+  background-color: inherit;
 }
 .container-name-card,
-.container-autor-card{
-    padding-bottom: 5px;
-    background-color: inherit;
-    max-height: 54px;
+.container-autor-card {
+  padding-bottom: 5px;
+  background-color: inherit;
+  max-height: 54px;
 }
-.container-name-card span{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 5px 0;
-    background-color: inherit;
+.container-name-card span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px 0;
+  background-color: inherit;
 }
-.container-autor-card span{
-    font-size: 16px;
-    background-color: inherit;
+.container-autor-card span {
+  font-size: 16px;
+  background-color: inherit;
 }
 /*LOADER*/
-.container-loader{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-loader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #000;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #000 transparent transparent transparent;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+}
 /*LOADER*/
 /*MESSAGE*/
-.message-error{
-    padding: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color:#fff;
-    font-weight:bold;
-    background-color:#dc3545;
+.message-error {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background-color: #dc3545;
 }
 /*MESSAGE*/
